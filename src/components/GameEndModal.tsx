@@ -16,7 +16,7 @@ const GameEndModal = ({
       {openModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="bg-black bg-opacity-50 absolute inset-0"></div>
-          <div className="bg-gray-200 px-5 py-10 rounded-lg shadow z-10 flex flex-col items-center w-1/3">
+          <div className="bg-gray-200 px-5 py-10 rounded-lg shadow z-10 flex flex-col items-center lg:w-1/3 w-2/3">
             <h3 className="mb-8 text-lg font-normal text-gray-500">
               {gameEndMessage}
             </h3>

@@ -44,15 +44,34 @@ export default function Home() {
           setGameEnded={setGameEnded}
         />
       ) : (
-        <div className="min-h-screen flex flex-col items-center">
-          <div className="text-7xl font-semibold text-blue-500 mt-32 mb-16">
-            BlackJack
+        // <div className="min-h-screen flex flex-col items-center">
+        //   <div className="text-7xl font-semibold text-blue-500 mt-32 mb-16">
+        //     BlackJack
+        //   </div>
+        //   <div className="my-5">
+        //     Click on Deal button to get a new shuffled deck and distribute 2
+        //     cards each.
+        //   </div>
+        //   <StartNewButton handleStartGame={dealCards} buttonText={"Deal"} />
+        // </div>
+        <div className="relative h-screen w-full">
+          <img
+            src="bg.jpg"
+            alt="Background"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="relative h-screen flex items-center bg-opacity-50">
+            <div className="lg:w-1/3 w-3/4 h-auto lg:h-auto p-10 bg-white border border-gray-200 rounded-lg shadow mx-auto flex flex-col items-center">
+              <span className="lg:text-7xl text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-emerald-500 mb-4">
+                BlackJack
+              </span>
+              <div className="mb-6 font-light text-sm text-gray-700 text-center">
+                Click on Deal button to get a new shuffled deck and distribute 2
+                cards each.
+              </div>
+              <StartNewButton handleStartGame={dealCards} buttonText={"Deal"} />
+            </div>
           </div>
-          <div className="my-5">
-            Click on Deal button to get a new shuffled deck and distribute 2
-            cards each.
-          </div>
-          <StartNewButton handleStartGame={dealCards} buttonText={"Deal"} />
         </div>
       )}
     </main>
